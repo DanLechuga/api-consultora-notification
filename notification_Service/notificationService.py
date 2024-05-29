@@ -15,7 +15,7 @@ async def sendMail(notification : sendNotification.sendNotification):
     emailMessages['From'] = notification.email
     emailMessages['To'] = destinatario
     emailMessages['Subject'] = asunto
-    msj = f"Posible cliente con identificaciones \n email:{notification.email},\n numero de telefono: {notification.phoneNumber} \n envio el siguiente mensaje "
+    msj = f"Posible cliente con identificaciones \n email: {notification.email},\n numero de telefono: {notification.phoneNumber} \n envio el siguiente mensaje "
     msj = msj + str(notification.message)
     emailMessages.set_content(msj)
     context = ssl.create_default_context()
